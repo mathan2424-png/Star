@@ -1,0 +1,117 @@
+/* STAR Policies Premium Design */
+.policies-page {
+    font-family: 'Outfit', sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+}
+
+/* Hero Section */
+.policies-hero {
+    position: relative;
+    padding: 16rem 0 8rem;
+    background-color: #e11d48;
+    /* Fallback color */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)),
+        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-align: center;
+    color: #ffffff !important;
+    overflow: hidden;
+    margin-top: -100px;
+    /* Pull it up under the transparent header */
+    z-index: 1;
+}
+
+.policies-hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1.5px;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.policies-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.95) !important;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Content Layout */
+.policies-content-wrap {
+    padding: 6rem 0;
+}
+
+.policy-block {
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background: #f8fafc;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.policy-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border-color: #fbbf24;
+}
+
+.policy-block h2 {
+    color: #e11d48;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.policy-block h2 i {
+    color: #fbbf24;
+    font-size: 1.5rem;
+}
+
+.policy-text {
+    line-height: 1.8;
+    color: #475569;
+    font-size: 1.1rem;
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.policy-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.policy-list li::before {
+    content: "\f101";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #fbbf24;
+}
+
+@media (max-width: 768px) {
+    .policies-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .policy-block {
+        padding: 2rem;
+    }
+}

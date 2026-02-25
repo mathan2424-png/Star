@@ -1,0 +1,95 @@
+/* Premium FAQ Accordion Styles */
+.faq-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+    padding: 2rem 0;
+}
+
+
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+details summary {
+    padding: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+    /* Remove default triangle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    outline: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+    /* Remove default triangle in Chrome */
+}
+
+details summary h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding-right: 2rem;
+}
+
+details summary i {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary i {
+    transform: rotate(45deg);
+}
+
+details[open] summary {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-content {
+    padding: 1.5rem;
+    padding-top: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .faq-grid-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .faq-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}

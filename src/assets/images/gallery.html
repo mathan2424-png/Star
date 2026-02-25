@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Gallery | Construction Network of India</title>
+    <link rel="icon" type="image/svg+xml" href="../logo.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #2d4f7c, #eb7125);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(45, 79, 124, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(45, 79, 124, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #eb7125;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .image-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(235, 113, 37, 0.2);
+            border-color: rgba(235, 113, 37, 0.3);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover .image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .image-info {
+            padding: 1.5rem;
+        }
+
+        .image-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #f8fafc;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        .image-size {
+            color: #ffc324;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-type {
+            display: inline-block;
+            background: rgba(45, 79, 124, 0.2);
+            color: #a5b4fc;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .recommended {
+            background: rgba(235, 113, 37, 0.2);
+            color: #eb7125;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(0, 210, 160, 0.3);
+        }
+
+        .usage-note {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid #6366f1;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .usage-note h3 {
+            color: #a5b4fc;
+            margin-bottom: 0.5rem;
+        }
+
+        .usage-note p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Star Generated Images Gallery</h1>
+            <p class="subtitle">AI-Generated Images for Construction Network of India Website</p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">19</div>
+                    <div class="stat-label">Total Images</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">17</div>
+                    <div class="stat-label">PNG Files</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">WEBP Files</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="usage-note">
+            <h3>📝 How to Use These Images</h3>
+            <p>All images are saved in the <code>images/</code> folder. The best hero banner has been copied to the root
+                as <code>banner.jpg</code> for easy use. You can replace the current CSS gradient background with any of
+                these images by updating the CSS file.</p>
+        </div>
+
+        <h2 class="section-title">⭐ Recommended Hero Banners</h2>
+        <div class="gallery">
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_hero_banner_1770813875811.png" alt="Premium Hero Banner">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_hero_banner_1770813875811.png</div>
+                    <div class="image-size">87.24 KB</div>
+                    <span class="image-type recommended">⭐ Best Choice</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/banner_new_1770810321893.png" alt="Banner New">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">banner_new_1770810321893.png</div>
+                    <div class="image-size">88.95 KB</div>
+                    <span class="image-type recommended">Recommended</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_construction_banner_1770810244381.png" alt="Premium Construction Banner">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_construction_banner_1770810244381.png</div>
+                    <div class="image-size">76.98 KB</div>
+                    <span class="image-type">Hero Banner</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🖼️ All Banner Images</h2>
+        <div class="gallery">
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/new_premium_banner_1770810147719.png" alt="New Premium Banner 1">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">new_premium_banner_1770810147719.png</div>
+                    <div class="image-size">47.04 KB</div>
+                    <span class="image-type">Banner</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/new_premium_banner_1770810346758.png" alt="New Premium Banner 2">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">new_premium_banner_1770810346758.png</div>
+                    <div class="image-size">82.21 KB</div>
+                    <span class="image-type">Banner</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/new_premium_banner_image_1770810376009.png" alt="New Premium Banner Image">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">new_premium_banner_image_1770810376009.png</div>
+                    <div class="image-size">79.30 KB</div>
+                    <span class="image-type">Banner</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_banner_1_1770810291973.png" alt="Premium Banner 1">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_banner_1_1770810291973.png</div>
+                    <div class="image-size">77.07 KB</div>
+                    <span class="image-type">Banner</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_banner_image_1770810202351.png" alt="Premium Banner Image">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_banner_image_1770810202351.png</div>
+                    <div class="image-size">81.00 KB</div>
+                    <span class="image-type">Banner</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_banner_new_1770810179312.png" alt="Premium Banner New">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_banner_new_1770810179312.png</div>
+                    <div class="image-size">66.27 KB</div>
+                    <span class="image-type">Banner</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🎨 UI Design & Mockups</h2>
+        <div class="gallery">
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_Star_ui_design_1770809063171.png" alt="Star UI Design">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_Star_ui_design_1770809063171.png</div>
+                    <div class="image-size">47.15 KB</div>
+                    <span class="image-type">UI Design</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/Star_premium_ui_design_1770809134785.png" alt="Star Premium UI">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">Star_premium_ui_design_1770809134785.png</div>
+                    <div class="image-size">57.89 KB</div>
+                    <span class="image-type">UI Design</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_Star_ui_mockup_1770809095745.png" alt="UI Mockup 1">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_Star_ui_mockup_1770809095745.png</div>
+                    <div class="image-size">48.64 KB</div>
+                    <span class="image-type">Mockup</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_Star_ui_mockup_1770809172622.png" alt="UI Mockup 2">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_Star_ui_mockup_1770809172622.png</div>
+                    <div class="image-size">46.28 KB</div>
+                    <span class="image-type">Mockup</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_ui_hero_1770809026662.png" alt="Premium UI Hero">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_ui_hero_1770809026662.png</div>
+                    <div class="image-size">34.25 KB</div>
+                    <span class="image-type">UI Hero</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">📸 Section Images</h2>
+        <div class="gallery">
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/premium_about_Star_1770813891769.png" alt="About Star">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">premium_about_Star_1770813891769.png</div>
+                    <div class="image-size">98.39 KB</div>
+                    <span class="image-type recommended">About Section</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/media__1770812377773.png" alt="Media 1">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">media__1770812377773.png</div>
+                    <div class="image-size">443.92 KB</div>
+                    <span class="image-type">Media</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/media__1770812867558.png" alt="Media 2">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">media__1770812867558.png</div>
+                    <div class="image-size">370.69 KB</div>
+                    <span class="image-type">Media</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🌐 WEBP Images</h2>
+        <div class="gallery">
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/extract_site_images_1770818856661.webp" alt="Extract Site Images">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">extract_site_images_1770818856661.webp</div>
+                    <div class="image-size">11.15 KB</div>
+                    <span class="image-type">WEBP</span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-wrapper">
+                    <img src="images/find_premium_banner_1770810515530.webp" alt="Find Premium Banner">
+                </div>
+                <div class="image-info">
+                    <div class="image-name">find_premium_banner_1770810515530.webp</div>
+                    <div class="image-size">11.15 KB</div>
+                    <span class="image-type">WEBP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

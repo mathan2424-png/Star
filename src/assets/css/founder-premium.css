@@ -1,0 +1,210 @@
+/* Founder Section - Premium Design */
+.founder-premium-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.founder-premium-container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.founder-image-premium {
+    flex: 0 0 450px;
+    position: relative;
+}
+
+.founder-image-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    padding: 15px;
+    transition: transform 0.5s ease;
+}
+
+.founder-image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.founder-text-premium {
+    flex: 1;
+}
+
+.founder-role-badge {
+    display: inline-block;
+    background: rgba(45, 79, 124, 0.1);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+
+}
+
+.founder-name-large {
+    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.founder-designation {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.founder-quote-box {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 4px solid var(--secondary-color);
+    margin-bottom: 2.5rem;
+}
+
+.founder-quote-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.founder-bio {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.signature-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    display: block;
+    margin-top: 1rem;
+}
+
+
+/* STAR Theme Elements */
+.construction-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    background: #fbbf24;
+    /* Star Gold */
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.construction-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1) 10px,
+            transparent 10px,
+            transparent 20px);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.construction-btn i,
+.construction-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.construction-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.5);
+    background: #fbbf24;
+}
+
+.construction-tape-overlay {
+    position: absolute;
+    bottom: 30px;
+    right: -20px;
+    background: #fbbf24;
+    color: #000;
+    padding: 10px 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: rotate(-5deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    overflow: hidden;
+}
+
+.construction-tape-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg,
+            #000,
+            #000 10px,
+            transparent 10px,
+            transparent 20px);
+    opacity: 0.1;
+}
+
+@media (max-width: 992px) {
+    .founder-premium-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .founder-image-premium {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .founder-quote-box {
+        padding-left: 0;
+        border-left: none;
+        border-top: 4px solid var(--secondary-color);
+        padding-top: 2rem;
+    }
+}

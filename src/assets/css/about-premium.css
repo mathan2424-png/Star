@@ -1,0 +1,417 @@
+/* Global Vars for this page */
+:root {
+    --primary-star: #e11d48;
+    /* Premium Star Red */
+    --accent-gold: #fbbf24;
+    /* Star Gold */
+    --secondary-dark: #0f172a;
+    /* Slate Dark */
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+}
+
+/* About Page Wrapper */
+.about-page {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    /* Removed overflow-x: hidden to let body handle it and prevent double scrollbars */
+}
+
+.text-primary-star {
+    color: var(--primary-star);
+}
+
+/* 1. Hero Section */
+.about-hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: -80px;
+    /* Offset for fixed header if needed */
+    padding-top: 80px;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.about-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    background: linear-gradient(to right, #ffffff, #fefce8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--accent-gold);
+    letter-spacing: 0.5px;
+}
+
+/* 2. Intro Section */
+.intro-section {
+    padding: 8rem 0;
+    overflow: hidden;
+    /* Prevent accent shapes from bleeding */
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--secondary-dark);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.intro-text p {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.intro-image-wrapper {
+    position: relative;
+    padding: 10px;
+}
+
+.intro-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+
+.intro-image-wrapper.visible .intro-image {
+    transform: scale(1.05);
+}
+
+.intro-image:hover {
+    transform: scale(1.08) !important;
+    box-shadow: 0 40px 80px rgba(225, 29, 72, 0.2);
+}
+
+.intro-bg-accent {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    /* Changed from right: -30px to prevent viewport bleed */
+    width: 80%;
+    height: 80%;
+    background: var(--primary-star);
+    opacity: 0.1;
+    border-radius: 40px;
+    z-index: 1;
+}
+
+/* 3. Milestones */
+.milestone-section {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+    border-radius: 50px 50px 0 0;
+    overflow: hidden;
+    /* Added to clip any interior bleed */
+}
+
+.milestone-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary-dark);
+    text-transform: uppercase;
+}
+
+.milestone-underline {
+    width: 80px;
+    height: 5px;
+    background: var(--primary-star);
+    margin: 1rem auto 4rem;
+    border-radius: 10px;
+}
+
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.milestone-item {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(225, 29, 72, 0.05);
+}
+
+.milestone-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-star);
+    box-shadow: 0 20px 40px rgba(225, 29, 72, 0.1);
+}
+
+.milestone-grid .milestone-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.milestone-grid .milestone-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.milestone-grid .milestone-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.milestone-grid .milestone-item:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.milestone-year {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-star);
+    margin-bottom: 1rem;
+}
+
+.milestone-item p {
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+/* 4. Mission & Vision */
+.mission-vision-section {
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mission-card,
+.vision-card {
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mission-card {
+    background: linear-gradient(135deg, #fff1f2 0%, #ffffff 100%);
+    border: 1px solid #ffe4e6;
+}
+
+.vision-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+    border: 1px solid #e0f2fe;
+}
+
+.mission-card.animate-on-scroll.visible {
+    transition-delay: 0.1s;
+}
+
+.vision-card.animate-on-scroll.visible {
+    transition-delay: 0.3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(225, 29, 72, 0.08);
+}
+
+.vision-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.08);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    color: var(--primary-star);
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.visible .card-icon {
+    animation: iconBounce 1s forwards;
+}
+
+@keyframes iconBounce {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.mission-card h3,
+.vision-card h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.mission-card p,
+.vision-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* 5. Why Collaborate */
+.why-star-section {
+    background-color: var(--secondary-dark);
+    border-radius: 0 0 50px 50px;
+    overflow: hidden;
+}
+
+.why-star-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.why-star-content h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #ffffff, #fbbf24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.why-star-list {
+    list-style: none;
+    padding: 0;
+}
+
+.why-star-list li {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.why-icon {
+    min-width: 60px;
+    height: 60px;
+    background: rgba(225, 29, 72, 0.1);
+    border: 1px solid rgba(225, 29, 72, 0.2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-star);
+}
+
+.why-text h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.why-text p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.why-star-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Base Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .intro-container,
+    .mission-vision-grid,
+    .why-star-grid,
+    .milestone-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .milestone-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .milestone-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero-section {
+        height: 60vh;
+    }
+}

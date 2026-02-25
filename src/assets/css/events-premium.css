@@ -1,0 +1,965 @@
+/* Global Vars for Events Page */
+:root {
+    --arch-gold: #fbbf24;
+    /* Star Gold */
+    --arch-gold-dark: #f59e0b;
+    --arch-red: #e11d48;
+    /* Star Red */
+    --arch-black: #0f172a;
+    --arch-dark-grey: #334155;
+    --arch-light-grey: #f8fafc;
+    --arch-white: #ffffff;
+    --arch-primary: #e11d48;
+    --arch-secondary: #fbbf24;
+    --font-serif: 'Outfit', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+/* Page Wrapper */
+.events-page-arch {
+    font-family: var(--font-sans);
+    color: var(--arch-black);
+    background-color: var(--arch-white);
+}
+
+/* 1. Arch Hero Section */
+.arch-hero-section {
+    padding: 4rem 0;
+    background: var(--arch-white);
+}
+
+.arch-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.arch-hero-text {
+    padding-right: 2rem;
+}
+
+.arch-headline {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 400;
+    /* Lighter weight for "Network that" */
+    margin-bottom: 1.5rem;
+    color: var(--arch-dark-grey);
+}
+
+.highlight-box {
+    background-color: var(--arch-gold);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 800;
+    /* Bold for "built network" */
+    margin-top: 10px;
+}
+
+.arch-divider {
+    width: 60px;
+    height: 4px;
+    background-color: var(--arch-black);
+    margin: 2rem 0;
+}
+
+.arch-subheadline {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--arch-black);
+}
+
+.highlight-box-small {
+    background-color: var(--arch-gold);
+    padding: 2px 10px;
+    display: inline-block;
+    margin: 5px 0;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.arch-hero-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. Date & Venue Banner */
+/* 2. Date & Venue Banner */
+.arch-date-banner {
+    background: url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    /* Use a building image */
+    padding: 6rem 0;
+    position: relative;
+    text-align: center;
+    color: var(--arch-black);
+}
+
+/* Overlay */
+.arch-date-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Slight dark tint for contrast */
+}
+
+.leader-modal-content {
+    background: white;
+    width: 95%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform-origin: center;
+    animation: modalSlideUp 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.date-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffffad;
+    padding: 3rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.date-banner-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--arch-dark-grey);
+}
+
+.date-time-box {
+    margin-bottom: 2rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem 0;
+}
+
+.date-time-box h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--arch-black);
+}
+
+.date-time-box p {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.stats-highlight {
+    font-size: 1.1rem;
+    font-weight: 800;
+    display: inline-block;
+    background: #ffffff4c;
+    /* Yellow highlight */
+    padding: 0.8rem 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--arch-black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.venue-pill {
+    background: transparent;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* 3. Architects Presence */
+.arch-presence-section {
+    padding: 3rem 0;
+    background: var(--arch-white);
+}
+
+.section-title-arch {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title-arch h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.highlight-text-bg {
+
+    padding: 2px 10px;
+
+}
+
+.presence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.presence-card {
+    position: relative;
+}
+
+.presence-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.session-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--arch-gold);
+    padding: 0.5rem 2rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--arch-black);
+    text-transform: uppercase;
+}
+
+/* 4. Why Arch Connect */
+/* 4. Why Arch Connect */
+/* 4. Why Arch Connect - Home Page Theme Style */
+.why-arch-section {
+    padding: 8rem 0;
+    /* High-end architectural background */
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.6)), url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+}
+
+.why-arch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.why-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, background 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-card .btn-details {
+    margin-top: auto;
+}
+
+.why-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.card-number {
+    width: 70px;
+    height: 70px;
+    background: #e11d48;
+    /* Star Red */
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 2.5rem;
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.why-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-motto {
+    color: #fbbf24;
+    /* Star Gold */
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    padding-bottom: 0;
+    font-family: var(--font-serif);
+}
+
+.card-motto::after {
+    display: none;
+}
+
+.why-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+}
+
+.btn-details {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-details:hover {
+    background: #e11d48;
+    /* Star Red */
+    color: #fff;
+    border-color: #e11d48;
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
+}
+
+/* 5. Construction Future */
+.construction-future-section {
+    padding: 4rem 0;
+    background: #fdfae7;
+    /* Very light beige/gold tint */
+}
+
+.future-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.future-image img {
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.future-content {
+    padding-left: 2rem;
+}
+
+.future-logo {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.future-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.future-tagline {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.future-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.btn-future {
+    background: transparent;
+    border: 2px solid var(--arch-black);
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-future:hover {
+    background: var(--arch-black);
+    color: var(--arch-white);
+}
+
+/* 6. Why ARCH Represents */
+.represents-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.represents-section h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.represents-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.highlight-inline {
+
+    padding: 0 4px;
+
+}
+
+.highlight-inline-block {
+
+    padding: 2px 8px;
+
+    display: inline-block;
+}
+
+/* 7. Footer Sponsors */
+.arch-footer-section {
+    background: var(--arch-brown);
+    color: var(--arch-white);
+}
+
+.arch-footer-top {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.arch-footer-quote {
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.4;
+}
+
+.arch-contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.arch-sponsors {
+    background: var(--arch-white);
+    padding: 2rem 0;
+}
+
+.sponsors-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.sponsor-item {
+    text-align: center;
+    color: #333;
+}
+
+.sponsor-item span {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: #888;
+}
+
+.sponsor-item img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Upcoming Events Section Spacing */
+.upcoming-events-section {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+/* Interactive Event Banner - Locally defined to ensure visibility */
+.hq-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hq-banner-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hq-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 2rem;
+}
+
+.hq-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hq-subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffffff;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Registration Modal Form Styles */
+.registration-modal {
+    padding: 2rem 3rem;
+}
+
+.form-info-title {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-info-title h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #64748b;
+    font-weight: 700;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.title-line {
+    height: 1px;
+    background: #e2e8f0;
+    width: 100%;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input-field-group {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-field-group:focus-within {
+    border-color: var(--secondary-color);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(235, 113, 37, 0.1);
+}
+
+.input-field-group i {
+    color: #94a3b8;
+    font-size: 1rem;
+    width: 25px;
+    text-align: center;
+}
+
+.input-field-group:focus-within i {
+    color: var(--secondary-color);
+}
+
+.input-field-group input,
+.input-field-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+}
+
+.input-field-group input::placeholder,
+.input-field-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+.address-group {
+    align-items: flex-start;
+}
+
+.address-group i {
+    margin-top: 1.2rem;
+}
+
+.registration-modal .cta-button {
+    background: var(--leader-deep);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 12px;
+}
+
+.registration-modal .cta-button:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(235, 113, 37, 0.3);
+}
+
+/* Visitor interest form styles */
+.visitor-form-modal {
+    max-width: 900px !important;
+    background: #fff;
+}
+
+.visitor-form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.visitor-title {
+    color: #9d2a23;
+    /* Maroon title */
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.v-header-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.v-logo {
+    height: 60px;
+}
+
+.visitor-interest-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.v-form-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+.v-form-row.align-start {
+    align-items: flex-start;
+}
+
+.v-form-row label {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    min-width: 220px;
+}
+
+.v-colon {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.v-form-row input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    color: #111;
+    padding: 0.2rem 0;
+    outline: none;
+    font-family: inherit;
+}
+
+.v-form-row input::placeholder {
+    color: #bbb;
+    letter-spacing: 2px;
+}
+
+.address-lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.visitor-survey-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.survey-box {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.survey-question {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.survey-options {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #333;
+}
+
+.checkbox-item input {
+    display: none;
+}
+
+.checkbox-item .box {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.checkbox-item input:checked+.box::after {
+    content: '\f00c';
+    /* FontAwesome Check icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #9d2a23;
+    font-size: 1.2rem;
+}
+
+.checkbox-item input:checked+.box {
+    border-color: #9d2a23;
+    background: #fdf2f2;
+}
+
+.confirm-btn {
+    align-self: flex-end;
+    margin-top: 3rem;
+    padding: 1rem 3rem !important;
+    font-size: 1.1rem !important;
+}
+
+/* Search bar / Mobile tweak (Assuming responsive needed) */
+@media (max-width: 768px) {
+    .visitor-form-header {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .v-header-right {
+        position: static;
+        transform: none;
+    }
+
+    .visitor-title {
+        font-size: 1.5rem;
+    }
+
+    .v-form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .v-form-row label {
+        min-width: auto;
+    }
+
+    .v-colon {
+        display: none;
+    }
+
+    .visitor-survey-container {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-item .box {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Event Detail Back Button Premium Styling */
+.back-to-events-btn {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.6rem 1.2rem;
+    background: #f1f5f9;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: backBtnSlideIn 0.8s ease-out forwards;
+    letter-spacing: 0.5px;
+}
+
+.back-to-events-btn i {
+    transition: transform 0.3s ease;
+}
+
+.back-to-events-btn:hover {
+    background: #1e3a8a;
+    color: #fff;
+    transform: translateX(-5px);
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.15);
+}
+
+.back-to-events-btn:hover i {
+    transform: translateX(-3px);
+}
+
+@keyframes backBtnSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* New Event Label Tags */
+.event-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-label-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #eb7125;
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover .event-label-tag {
+    background: #fff;
+    color: #eb7125;
+    transform: scale(1.05);
+}
+
+.hq-banner {
+    transition: all 0.5s ease-in-out;
+}
+
+.hq-banner-bg {
+    transition: background-image 0.5s ease-in-out;
+}
+
+.hq-title {
+    transition: all 0.4s ease;
+}

@@ -1,0 +1,73 @@
+/* Partners Infinite Scroll Marquee */
+.partners-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.partners-marquee-wrapper::before,
+.partners-marquee-wrapper::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.partners-marquee-wrapper::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, var(--surface-color) 0%, transparent 100%);
+}
+
+.partners-marquee-wrapper::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, var(--surface-color) 0%, transparent 100%);
+}
+
+.partners-marquee {
+    display: flex;
+    width: fit-content;
+    animation: marquee 40s linear infinite;
+}
+
+.client-logo-item {
+    flex-shrink: 0;
+    width: 250px;
+    /* Width of each logo card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.marquee-logo-inner {
+    transition: transform 0.3s ease;
+    filter: grayscale(100%) contrast(0.8);
+    opacity: 0.6;
+}
+
+.marquee-logo-inner:hover {
+    transform: scale(1.1);
+    filter: none;
+    opacity: 1;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Half of the doubled content */
+    }
+}
+
+/* Pause animation on hover */
+.partners-marquee-wrapper:hover .partners-marquee {
+    animation-play-state: paused;
+}

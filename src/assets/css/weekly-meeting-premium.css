@@ -1,0 +1,256 @@
+/* Global Vars for Weekly Meeting Page */
+:root {
+    --wm-primary: #e11d48;
+    /* Star Red */
+    --wm-secondary: #fbbf24;
+    /* Star Gold */
+    --wm-accent: #fbbf24;
+    /* Amber/Gold */
+    --wm-dark: #0f172a;
+    --wm-light: #f8fafc;
+    --wm-white: #ffffff;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+.weekly-meeting-page {
+    font-family: var(--font-body);
+    color: var(--wm-dark);
+    line-height: 1.6;
+    background-color: var(--wm-white);
+}
+
+/* 1. Hero Section */
+.wm-hero {
+    position: relative;
+    padding: 8rem 0 6rem;
+    background: linear-gradient(135deg, rgb(174 30 33 / 59%), rgb(174 30 33 / 17%)), url(https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80);
+    background-size: cover;
+    background-position: center;
+    color: var(--wm-white);
+    text-align: center;
+}
+
+.wm-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.wm-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.wm-hero p {
+    font-size: 1.25rem;
+    opacity: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+/* 2. Overview Section */
+.wm-overview {
+    padding: 6rem 0;
+    background: var(--wm-light);
+}
+
+.wm-card {
+    background: var(--wm-white);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.wm-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.wm-stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f1f5f9;
+    border-radius: 16px;
+}
+
+.wm-stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--wm-secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* 3. Protocols / Procedures */
+.wm-protocol-section {
+    padding: 8rem 0;
+    position: relative;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect */
+}
+
+.wm-protocol-section .section-title h2 {
+    color: #ffffff;
+}
+
+.wm-protocol-section .section-title p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.wm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.wm-info-box {
+    padding: 2.5rem;
+    background: #ffffffa7;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.wm-info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--wm-secondary);
+}
+
+.wm-info-box i {
+    font-size: 2rem;
+    color: var(--wm-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.wm-info-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--wm-primary);
+}
+
+/* 4. Order of Meeting (Timeline) */
+.wm-run-order {
+    padding: 6rem 0;
+    background: #fdfae7;
+    color: var(--wm-dark);
+}
+
+.wm-run-order .section-title h2 {
+    color: var(--wm-primary);
+}
+
+.wm-run-order .section-title p {
+    color: #475569;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 4rem auto 0;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    border-left: 2px solid rgba(30, 58, 138, 0.1);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--wm-secondary);
+    box-shadow: 0 0 10px rgba(235, 113, 37, 0.3);
+}
+
+.timeline-item:last-child {
+    border-left: none;
+}
+
+.timeline-item h4 {
+    color: var(--wm-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+    color: #475569;
+}
+
+/* 5. Awards Section */
+.wm-awards,
+.wm-awards-section {
+    padding: 6rem 0 10rem;
+    background: var(--wm-white);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.award-card {
+    text-align: center;
+    padding: 2rem;
+    background: #fdf2f8;
+    /* Very light pink/orange */
+    border-radius: 20px;
+    border: 1px dashed var(--wm-secondary);
+}
+
+.award-card i {
+    font-size: 2.5rem;
+    color: #f59e0b;
+    margin-bottom: 1rem;
+}
+
+/* General Utilities */
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    color: var(--wm-primary);
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.animate-wm {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+    .wm-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .wm-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
