@@ -100,14 +100,14 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom-v2">
-                    <div className="container">
-                        <p style={{ textAlign: 'left' }}>
+                    <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <p style={{ textAlign: 'left', margin: 0 }}>
                             <Link to="/terms" style={{ color: 'inherit', transition: 'color 0.3s' }}>Terms and Conditions</Link>
                         </p>
 
-                        <p style={{ textAlign: 'center' }}>© 2026 Star Business Forum. All rights reserved.</p>
+                        <p style={{ textAlign: 'center', margin: 0 }}>© 2026 Star Business Forum. All rights reserved.</p>
 
-                        <p style={{ textAlign: 'right' }}>Designed by <span
+                        <p style={{ textAlign: 'right', margin: 0 }}>Designed by <span
                             style={{ color: '#e11d48' }}><a href="https://www.oceansoftwares.com"
                                 style={{ color: 'inherit', transition: 'color 0.3s' }}> Ocean Softwares</a></span></p>
                     </div>
