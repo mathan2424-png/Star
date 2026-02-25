@@ -76,25 +76,25 @@ const Footer = () => {
                     <div className="footer-col-v2">
                         <h3>Contacts</h3>
                         <div className="contact-box-v2">
-                            <div className="contact-icon-v2"><i className="fas fa-map-marker-alt"></i></div>
-                            <div className="contact-details-v2">
+                            <div className="contact-header-v2">
+                                <i className="fas fa-map-marker-alt contact-icon-v2"></i>
                                 <strong>Address:</strong>
-                                <p>Prompt Tower, Plot No : 324, Ram Nagar South Extension, 12 Street, Off 200 Feet Radial Road, Near Kamakshi Hospital, Pallikaranai, Chennai - 600 100</p>
                             </div>
+                            <p className="contact-text-v2">Prompt Tower, Plot No : 324, Ram Nagar South Extension, 12 Street, Off 200 Feet Radial Road, Near Kamakshi Hospital, Pallikaranai, Chennai - 600 100</p>
                         </div>
                         <div className="contact-box-v2">
-                            <div className="contact-icon-v2"><i className="fas fa-envelope"></i></div>
-                            <div className="contact-details-v2">
+                            <div className="contact-header-v2">
+                                <i className="fas fa-envelope contact-icon-v2"></i>
                                 <strong>Email:</strong>
-                                <p>starbusiness.intl@gmail.com</p>
                             </div>
+                            <p className="contact-text-v2">starbusiness.intl@gmail.com</p>
                         </div>
                         <div className="contact-box-v2">
-                            <div className="contact-icon-v2"><i className="fas fa-phone-alt"></i></div>
-                            <div className="contact-details-v2">
+                            <div className="contact-header-v2">
+                                <i className="fas fa-phone-alt contact-icon-v2"></i>
                                 <strong>Phone:</strong>
-                                <p>+91 93420 08371</p>
                             </div>
+                            <p className="contact-text-v2">+91 93420 08371</p>
                         </div>
                     </div>
                 </div>
