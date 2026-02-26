@@ -76,38 +76,38 @@ const Footer = () => {
                     <div className="footer-col-v2">
                         <h3>Contacts</h3>
                         <div className="contact-box-v2">
-                            <div className="contact-icon-v2"><i className="fas fa-map-marker-alt"></i></div>
-                            <div className="contact-details-v2">
+                            <div className="contact-header-v2">
+                                <i className="fas fa-map-marker-alt contact-icon-v2"></i>
                                 <strong>Address:</strong>
-                                <p>Prompt Tower, Plot No : 324, Ram Nagar South Extension, 12 Street, Off 200 Feet Radial Road, Near Kamakshi Hospital, Pallikaranai, Chennai - 600 100</p>
                             </div>
+                            <p className="contact-text-v2">Prompt Tower, Plot No : 324, Ram Nagar South Extension, 12 Street, Off 200 Feet Radial Road, Near Kamakshi Hospital, Pallikaranai, Chennai - 600 100</p>
                         </div>
                         <div className="contact-box-v2">
-                            <div className="contact-icon-v2"><i className="fas fa-envelope"></i></div>
-                            <div className="contact-details-v2">
+                            <div className="contact-header-v2">
+                                <i className="fas fa-envelope contact-icon-v2"></i>
                                 <strong>Email:</strong>
-                                <p>starbusiness.intl@gmail.com</p>
                             </div>
+                            <p className="contact-text-v2">starbusiness.intl@gmail.com</p>
                         </div>
                         <div className="contact-box-v2">
-                            <div className="contact-icon-v2"><i className="fas fa-phone-alt"></i></div>
-                            <div className="contact-details-v2">
+                            <div className="contact-header-v2">
+                                <i className="fas fa-phone-alt contact-icon-v2"></i>
                                 <strong>Phone:</strong>
-                                <p>+91 93420 08371</p>
                             </div>
+                            <p className="contact-text-v2">+91 93420 08371</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="footer-bottom-v2">
-                    <div className="container">
-                        <p style={{ textAlign: 'left' }}>
+                    <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <p style={{ textAlign: 'left', margin: 0 }}>
                             <Link to="/terms" style={{ color: 'inherit', transition: 'color 0.3s' }}>Terms and Conditions</Link>
                         </p>
 
-                        <p style={{ textAlign: 'center' }}>© 2026 Star Business Forum. All rights reserved.</p>
+                        <p style={{ textAlign: 'center', margin: 0 }}>© 2026 Star Business Forum. All rights reserved.</p>
 
-                        <p style={{ textAlign: 'right' }}>Designed by <span
+                        <p style={{ textAlign: 'right', margin: 0 }}>Designed by <span
                             style={{ color: '#e11d48' }}><a href="https://www.oceansoftwares.com"
                                 style={{ color: 'inherit', transition: 'color 0.3s' }}> Ocean Softwares</a></span></p>
                     </div>

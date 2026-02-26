@@ -326,7 +326,7 @@ nav {
     margin-bottom: 0;
     line-height: 1.1;
     font-weight: 800;
-    color: #ffffff;
+    color: #ae1e20;
     background: none;
     -webkit-background-clip: text;
     background-clip: text;
@@ -1160,7 +1160,7 @@ nav {
     line-height: 1.8;
     color: #b0b0b0;
     margin-bottom: 2.5rem;
-    text-align: left;
+    text-align: justify;
 }
 
 .social-strip-v2 {
@@ -1171,18 +1171,17 @@ nav {
 .social-strip-v2 a {
     width: 38px;
     height: 38px;
-    background: #3a3a3a;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    border-radius: 6px;
+    border-radius: 50%;
     transition: all 0.3s ease;
     font-size: 0.95rem;
 }
 
 .social-strip-v2 a:hover {
-    background: #e11d48;
+    color: #e11d48;
     transform: translateY(-3px);
 }
 
@@ -1201,10 +1200,9 @@ nav {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
+    width: 64px;
     height: 2px;
     background: #fff;
-    /* Changed to white as per image */
 }
 
 .footer-links-v2 {
@@ -1239,37 +1237,36 @@ nav {
 
 .contact-box-v2 {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-header-v2 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .contact-icon-v2 {
-    flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    background: #333;
+    color: #e11d48;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    color: #e11d48;
-    /* Red icons as per image */
-    font-size: 1.1rem;
+    width: 20px;
 }
 
-.contact-details-v2 strong {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
+.contact-header-v2 strong {
+    font-size: 1.05rem;
+    font-weight: 600;
     color: #fff;
-    margin-bottom: 0.4rem;
 }
 
-.contact-details-v2 p {
-    font-size: 0.9rem;
+.contact-text-v2 {
+    font-size: 0.95rem;
     color: #b0b0b0;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
     text-align: left;
 }
